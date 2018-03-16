@@ -1,0 +1,69 @@
+﻿<Controls:MetroWindow x:Class="TabataTimer.MainWindow"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabataTimer"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="600" 
+        Width="850" ResizeMode="CanMinimize">
+    <Grid>
+
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="436" Margin="10,10,0,0" VerticalAlignment="Top" Width="314">
+            <TabItem Header="Prepare">
+                <Grid Margin="0,2,-549,-55">
+                    <TextBox x:Name="textBoxPrepare" IsReadOnly="True" HorizontalAlignment="Left" Height="42" Margin="313,67,0,0" TextWrapping="Wrap" Text="20 Seconds" VerticalAlignment="Top" Width="193" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" RenderTransformOrigin="0.5,0.5"/>
+                    <Label x:Name="labelPrepare" Content="Prepare:" HorizontalAlignment="Left" Margin="178,67,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18"/>
+                    <Button x:Name="buttonIncreasePrepare" Content="+" HorizontalAlignment="Left" Margin="511,67,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonPrepare_Click" RenderTransformOrigin="0.492,0.524"/>
+
+                    <TextBox x:Name="textBoxWork" IsReadOnly="True" HorizontalAlignment="Left" Height="42" Margin="313,127,0,0" TextWrapping="Wrap" Text="20 Seconds" VerticalAlignment="Top" Width="193" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+                    <Label x:Name="labelWork" Content="Work:" HorizontalAlignment="Left" Margin="178,131,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18"/>
+                    <Button x:Name="buttonIncreaseWork" Content="+" HorizontalAlignment="Left" Margin="511,127,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonWork_Click"/>
+
+                    <TextBox x:Name="textBoxRest" IsReadOnly="True" HorizontalAlignment="Left" Height="42" Margin="313,187,0,0" TextWrapping="Wrap" Text="10 Seconds" VerticalAlignment="Top" Width="193" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+                    <Label x:Name="labelRest" Content="Rest:" HorizontalAlignment="Left" Margin="178,191,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18"/>
+                    <Button x:Name="buttonIncreaseRest" Content="+" HorizontalAlignment="Left" Margin="511,187,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonRest_Clickl"/>
+
+                    <TextBox x:Name="textBoxCycles" IsReadOnly="True" HorizontalAlignment="Left" Height="42" Margin="313,247,0,0" TextWrapping="Wrap" Text="8 Cycles" VerticalAlignment="Top" Width="193" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+                    <Label x:Name="labelCycles" Content="Cycles:" HorizontalAlignment="Left" Margin="178,251,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18"/>
+                    <Button x:Name="buttonIncreaseCycles" Content="+" HorizontalAlignment="Left" Margin="511,247,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonCycles_Click"/>
+
+                    <TextBox x:Name="textBoxTabatas" IsReadOnly="True" HorizontalAlignment="Left" Height="42" Margin="313,307,0,0" TextWrapping="Wrap" Text="1 Tabata" VerticalAlignment="Top" Width="193" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+                    <Label x:Name="labelTabatas" Content="Tabatas:" HorizontalAlignment="Left" Margin="178,311,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18"/>
+                    <Button x:Name="buttonIncreaseTabatas" Content="+" HorizontalAlignment="Left" Margin="511,307,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonTabatas_Click"/>
+
+                    <Button x:Name="buttonStart" Content="Start workout" Margin="326,445,326,-50" VerticalAlignment="Top" Height="49" FontSize="18" Click="buttonStart_Click"/>
+
+                    <Button x:Name="buttonDecreasePrepare" Content="-" HorizontalAlignment="Left" Margin="577,67,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonPrepare_Click"/>
+                    <Button x:Name="buttonDecreaseWork" Content="-" HorizontalAlignment="Left" Margin="577,127,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonWork_Click"/>
+                    <Button x:Name="buttonDecreaseRest" Content="-" HorizontalAlignment="Left" Margin="577,187,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonRest_Clickl"/>
+                    <Button x:Name="buttonDecreaseCycles" Content="-" HorizontalAlignment="Left" Margin="577,247,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonCycles_Click"/>
+                    <Button x:Name="buttonDecreaseTabatas" Content="-" HorizontalAlignment="Left" Margin="577,307,0,0" VerticalAlignment="Top" Width="61" Height="42" FontSize="20" Click="buttonTabatas_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Workout">
+                <Grid Margin="0,2,-519,-122">
+                    <Label x:Name="labelRestTab2" Content="Rest" Margin="130,10,562,0" VerticalAlignment="Top" Height="57" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelWorkTab2" Content="Workout" Margin="562,10,130,0" VerticalAlignment="Top" Height="57" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelRestTimer" Content="10s" Margin="90,72,526,0" VerticalAlignment="Top" Height="104" FontSize="65" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelWorkTimer" Content="20s" Margin="526,72,90,0" VerticalAlignment="Top" Height="104" FontSize="65" HorizontalContentAlignment="Center"/>
+
+                    <Label x:Name="labelCyclesTab2" Content="Cycles" Margin="130,210,562,0" VerticalAlignment="Top" Height="57" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelTabatasTab2" Content="Tabatas" Margin="562,210,130,0" VerticalAlignment="Top" Height="57" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelCycleCount" Content="00" HorizontalAlignment="Left" Margin="130,272,0,0" VerticalAlignment="Top" Height="104" Width="135" FontSize="65" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelTabataCount" Content="00" Margin="562,272,130,0" VerticalAlignment="Top" Height="104" FontSize="65" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelComp1" Content="Completed" HorizontalAlignment="Left" Margin="102,389,0,0" VerticalAlignment="Top" Width="185" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelComp2" Content="Completed" Margin="540,389,102,0" VerticalAlignment="Top" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="buttonStopWorkout" Content="Stop workout" Margin="301,455,301,0" VerticalAlignment="Top" FontSize="24" Click="butonStopWorkout_click"/>
+                    <Label x:Name="labelPrepareTab2" Content="Prepare" Margin="301,136,301,0" VerticalAlignment="Top" Height="57" FontSize="32" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="labelPrepareTimer" Content="10s" Margin="301,198,301,0" VerticalAlignment="Top" Height="104" FontSize="65" HorizontalContentAlignment="Center"/>
+
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Controls:MetroWindow>
